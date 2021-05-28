@@ -18,9 +18,8 @@ def generateReport():
         
     class_report = cursor.fetchall()
 
-    file.write("[FATEC ZONA LESTE] - RELATORIO DE FALTAS DA TURMA - SAO PAULO")
     file.write("\n")
-
+    
     for report in class_report:
         file.write("\n")
         file.write("RA: " + str(report[0]) + " - " + "NOME: " + str(report[1]) + " - " + "DISCIPLINA: " + str(report[2]) + " - " + "DATA AULA: " + str(report[3]) + " - " + "PRESENCAS: " + str(report[4]) + " - " + "FALTAS: " + str(report[5]))

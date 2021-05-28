@@ -3,12 +3,14 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 
+
 def generatePDF():
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("Arial", size=8)
 
     pdf.cell(200, 10, txt="RELATORIO DE FALTAS DA TURMA", ln=1, align='C')
+    pdf.cell(200, 10, txt="[FATEC ZONA LESTE] - RELATORIO DE FALTAS DA TURMA - SAO PAULO", ln=1, align='C')
 
     file = open("relatorio_turma.txt", 'r')
 
